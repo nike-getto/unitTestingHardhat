@@ -2,6 +2,7 @@
 pragma solidity ^0.8.7;
 
 contract Faucet {
+    uint256 public number;
     address payable public owner;
 
     constructor() payable {
@@ -23,8 +24,12 @@ contract Faucet {
         selfdestruct(owner);
     }
 
+    function assignNumber(uint256 _number) public {
+        number = _number;
+    }
+
     modifier onlyOwner() {
-        require(msg.sender == owner);
+        require(msg.sender == owner, "You are not the owner!");
         _;
     }
 }
