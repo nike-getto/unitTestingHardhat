@@ -1,7 +1,7 @@
 # Unit testing Example
 
-This is an app for practicing of Hardhat testing.
+This project shows testing of functions, constructor, modifiers and integrity of Lock.sol contract.
 
-```
-function exampleFunc()
+```javascript
+it('should do something')
 ```
